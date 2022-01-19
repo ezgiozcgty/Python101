@@ -1,0 +1,24 @@
+print('sayı tahmin oyununa hoşgeldiniz')
+
+number= 32
+
+playernumbers= int(input('0 ile 50 arasında bir sayı tahmin ediniz: '))
+
+change = 2
+
+while True :
+    if change !=0 :
+        if playernumbers > number :
+            change -= 1
+            print(change, 'hakkınız kaldı:')
+            playernumbers = int(input('Daha küçük bir sayı giriniz:'))
+        elif playernumbers < number :
+            change -=1
+            print(change, 'hakkınız kaldı:')
+            playernumbers = int(input('Daha büyük bir sayı giriniz:'))
+        if playernumbers == number:
+            print('Tebrikler oyunu kazandınız!')
+            break
+        if change == 0 :
+            print('Üzgünüm kaybettin :(')
+            break
